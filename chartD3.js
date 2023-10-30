@@ -34,13 +34,17 @@ chart = {
   const dash_length = 6;
   const dash_spacing = 6;
 
+  // Text distance from node
+  const x = 8;
+  const y = -8;
+
   /*
-    Colors
-    Green-blue: systems programming
+    Color scale
+    Denim: systems programming
     Pumpkin: object-oriented programming
     Slimy green: computing
-    Middle blue purple: functional programming
-    Acid green: dynamic
+    Middle purple: functional programming
+    Acid gold: dynamic
     Cerulean: scripting
   */
   const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -101,8 +105,8 @@ chart = {
         .text(node => node.language);
     node.append("text")
         .text(node => node.language)
-        .attr("x", 8)
-        .attr("y", -8);
+        .attr("x", x)
+        .attr("y", y);
     node.call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
 
   // Set the positions of the nodes each time the simulation moves
