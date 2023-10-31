@@ -11,13 +11,13 @@ chart = {
 
   // Weight thresholds
   // Light thin dotted line
-  const weight1 = 0.3115449194;
+  const weight1 = 0.31;
   // Light thin dashed line
-  const weight2 = 0.3331677002;
+  const weight2 = 0.33;
   // Dark thin dashed line
-  const weight3 = 0.3573156109;
+  const weight3 = 0.357;
   // Dark thin solid line
-  const weight4 = 0.3896073164;
+  const weight4 = 0.39;
   // Dark thick solid line
 
   // Edge colors
@@ -26,7 +26,7 @@ chart = {
 
   // Line weights
   const thin = 1;
-  const thick = 2;
+  const thick = 3;
 
   // Dash patterns
   const dot_length = 2;
@@ -106,7 +106,7 @@ chart = {
     node.append("text")
         .text(node => node.language)
         .attr("x", x)
-        .attr("y", y);
+        .attr("y", y)
     node.call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
 
   // Set the positions of the nodes each time the simulation moves
